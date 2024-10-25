@@ -1,4 +1,3 @@
-print("helow world")
 import sys
 import pygame as pg
 import time
