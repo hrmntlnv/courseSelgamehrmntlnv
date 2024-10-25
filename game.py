@@ -6,7 +6,7 @@ SCREEN_WIDTH = 600
 SCREEN_HEIGHT = 800
 
 WHITE = (255, 255, 255)
-BLACKE = (0, 0, 0)
+BLACK = (0, 0, 0)
 
 PLATFORM_WIDTH = 200
 PLATFORM_HEIGHT = 30
@@ -43,9 +43,9 @@ while True:
    
 
     platform = pg.Rect( PLATFORM_X, PLATFORM_Y, PLATFORM_WIDTH, PLATFORM_HEIGHT)
-    pg.draw.rect( screen, BLACKE, platform)
+    pg.draw.rect( screen, BLACK, platform)
     ball = pg.Rect( BALL_X, BALL_Y, BALL_WIDTH, BALL_HEIGHT)
-    pg.draw.rect( screen, BLACKE, ball)
+    pg.draw.rect( screen, BLACK, ball)
 
     BALL_Y += 3
     
