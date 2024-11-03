@@ -69,7 +69,10 @@ def game(screen, clock):
 
 
         if ball.colliderect(platform):
-            BALL_DIRECTION = BALL_DIRECTION.reflect(pg.math.Vector2(0,-1))
+            ball_center = (ball.x + ball.width/2, ball.y + ball.height/2)
+            platform_center = (platform.x + platform.width/2, platform.y + platform.height/2)
+            colision_vector = (ball_center[0]-platform_center[0],ball_center[1]-platform[1])
+            BALL_DIRECTION = pg.math.Vector2(colision_vector).normalize()
             COUNTER += 1
         if ball.colliderect(POT_BORDER):
             BALL_DIRECTION = BALL_DIRECTION.reflect(pg.math.Vector2(0,1))
